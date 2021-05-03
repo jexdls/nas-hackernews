@@ -9,9 +9,8 @@ import fetchedArticleItems from "./data.json";
 
 function App() {
   const [articleItems, setArticleItems] = useState(fetchedArticleItems);
-
   return (
-    <div className="App flex flex-col space-y-2">
+    <div className="App h-screen flex flex-col space-y-2">
       <Banner />
       <Sort />
       <Articles articleItems={articleItems} />

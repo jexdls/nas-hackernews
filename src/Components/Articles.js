@@ -5,7 +5,7 @@ export default function Articles({ articleItems }) {
     <div>
       {/* Map through the articles JSON and generate a component for each article  */}
       {articleItems.map((item) => (
-        <ArticleCard data={item} />
+        <ArticleCard data={item} key={item.id} />
       ))}
     </div>
   );

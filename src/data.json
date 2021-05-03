@@ -1,80 +1,18 @@
  [
     {
+      "id": "1",
         "header": "My Header",
         "description": "This is a short description",
         "commentsNum": "40",
-        "timePassed": "50250"
+        "timePassed": "52310250"
       },
-      {
+      {      "id": "2",
+
         "header": "Awesome Article",
         "description":
-          "This is a short descriptiona short description averagea short description.",
+          "This is a short descriptiona short description averagea short d descriptiona short description averagea short d descriptiona short description averagea short d descriptiona short description averagea short d descriptiona short description averagea short description.",
         "commentsNum": "24",
-        "timePassed": "345222"
-      },
-      {
-        "header": "BREAKING NEWS: I AM BOOM",
-        "description":
-          "This is a long description and this is attention seeking. Awesome description lorem ipsum dolorseeking. Awesome description lorem ipsum dolorseeking. Awesome description lorem ipsum dolor",
-        "commentsNum": "84",
-        "timePassed": "54324321"
-      },{
-        "header": "My Header",
-        "description": "This is a short description",
-        "commentsNum": "40",
-        "timePassed": "50250"
-      },
-      {
-        "header": "Awesome Article",
-        "description":
-          "This is a short descriptiona short description averagea short description.",
-        "commentsNum": "24",
-        "timePassed": "345222"
-      },
-      {
-        "header": "BREAKING NEWS: I AM BOOM",
-        "description":
-          "This is a long description and this is attention seeking. Awesome description lorem ipsum dolorseeking. Awesome description lorem ipsum dolorseeking. Awesome description lorem ipsum dolor",
-        "commentsNum": "84",
-        "timePassed": "54324321"
-      },{
-        "header": "My Header",
-        "description": "This is a short description",
-        "commentsNum": "40",
-        "timePassed": "50250"
-      },
-      {
-        "header": "Awesome Article",
-        "description":
-          "This is a short descriptiona short description averagea short description.",
-        "commentsNum": "24",
-        "timePassed": "345222"
-      },
-      {
-        "header": "BREAKING NEWS: I AM BOOM",
-        "description":
-          "This is a long description and this is attention seeking. Awesome description lorem ipsum dolorseeking. Awesome description lorem ipsum dolorseeking. Awesome description lorem ipsum dolor",
-        "commentsNum": "84",
-        "timePassed": "54324321"
-      },{
-        "header": "My Header",
-        "description": "This is a short description",
-        "commentsNum": "40",
-        "timePassed": "50250"
-      },
-      {
-        "header": "Awesome Article",
-        "description":
-          "This is a short descriptiona short description averagea short description.",
-        "commentsNum": "24",
-        "timePassed": "345222"
-      },
-      {
-        "header": "BREAKING NEWS: I AM BOOM",
-        "description":
-          "This is a long description and this is attention seeking. Awesome description lorem ipsum dolorseeking. Awesome description lorem ipsum dolorseeking. Awesome description lorem ipsum dolor",
-        "commentsNum": "84",
-        "timePassed": "54324321"
+        "timePassed": "342222"
       }
 ]
   

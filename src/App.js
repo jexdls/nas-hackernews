@@ -10,7 +10,7 @@ import fetchedArticleItems from "./data.json";
 function App() {
   const [articleItems, setArticleItems] = useState(fetchedArticleItems);
   return (
-    <div className="App h-screen flex flex-col space-y-2">
+    <div className="App h-screen flex flex-col">
       <Banner />
       <Sort />
       <Articles articleItems={articleItems} />

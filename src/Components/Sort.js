@@ -5,7 +5,7 @@ export default function Sort() {
   const [selected, setSelected] = useState("new");
 
   return (
-    <div className={`flex m-4 space-x-3`}>
+    <div className={`ml-6 mt-6 flex space-x-2`}>
       <SortButton
         selectedValue="new"
         selected_State={{ selected, setSelected }}

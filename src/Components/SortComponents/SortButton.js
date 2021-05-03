@@ -16,7 +16,7 @@ export default function SortButton({
   return (
     <button
       onClick={() => setSelected(selectedValue)}
-      className={`rounded-full py-0.5 px-3 font-bold focus:outline-none ${hoverEffect} ${selectedEffect} `}
+      className={`rounded-full py-0.5 px-3 font-bold text-md focus:outline-none ${hoverEffect} ${selectedEffect} `}
     >
       {children}
     </button>

@@ -5,7 +5,7 @@ export default function Sort() {
   const [selected, setSelected] = useState("new");
 
   // Set color of border bottom to corresponding color based on selected string
-  const selectedEffect = selected == "new" ? " x-border-pri " : " x-border-g ";
+  const selectedEffect = " x-border-pri ";
 
   return (
     <div className={`flex m-4 space-x-3 border-b-4 ${selectedEffect}`}>

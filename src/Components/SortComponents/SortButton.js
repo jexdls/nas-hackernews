@@ -12,12 +12,14 @@ export default function SortButton({
 
   // set button shape to pill if not selected or D shaped if selected
   const selectedEffect =
-    selected == selectedValue ? "rounded-t-xl" : "rounded-full";
+    selected == selectedValue
+      ? "rounded-t-xl x-bg-color-pri"
+      : "rounded-full x-bg-color-g";
 
   return (
     <button
       onClick={() => setSelected(selectedValue)}
-      className={`py-0.5 px-3 font-bold focus:outline-none ${specialClassName} ${hoverEffect} ${selectedEffect} `}
+      className={`py-0.5 px-3 font-bold focus:outline-none ${hoverEffect} ${selectedEffect} `}
     >
       {children}
     </button>

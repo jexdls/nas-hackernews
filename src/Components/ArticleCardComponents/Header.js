@@ -1,3 +1,3 @@
-export default function Header() {
-  return <div className="x-color-bt font-bold text-lg ">Lorem psum Header</div>;
+export default function Header({ header }) {
+  return <div className="x-color-bt font-bold text-lg ">{header}</div>;
 }

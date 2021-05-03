@@ -4,14 +4,10 @@ import SortButton from "./SortComponents/SortButton";
 export default function Sort() {
   const [selected, setSelected] = useState("new");
 
-  // Set color of border bottom to corresponding color based on selected string
-  const selectedEffect = " x-border-pri ";
-
   return (
-    <div className={`flex m-4 space-x-3 border-b-4 ${selectedEffect}`}>
+    <div className={`flex m-4 space-x-3`}>
       <SortButton
         selectedValue="new"
-        specialClassName="x-bg-color-pri"
         selected_State={{ selected, setSelected }}
       >
         New
@@ -19,10 +15,16 @@ export default function Sort() {
 
       <SortButton
         selectedValue="past"
-        specialClassName="x-bg-color-g"
         selected_State={{ selected, setSelected }}
       >
         Past
+      </SortButton>
+
+      <SortButton
+        selectedValue="top"
+        selected_State={{ selected, setSelected }}
+      >
+        Top
       </SortButton>
     </div>
   );

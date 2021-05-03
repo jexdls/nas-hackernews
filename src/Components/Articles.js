@@ -1,4 +1,4 @@
-import ArticleCard from "./ArticleCard";
+import ArticleCard from "./ArticlesComponents/ArticleCard";
 
 export default function Articles({ articleItems }) {
   return (

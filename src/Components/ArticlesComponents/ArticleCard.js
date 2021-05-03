@@ -1,11 +1,10 @@
 import Description from "./ArticleCardComponents/Description";
 import Detail from "./ArticleCardComponents/Detail";
 import Header from "./ArticleCardComponents/Header";
-import React, { useState } from "react";
 
 export default function ArticleCard({ data }) {
   const hoverEffect =
-    "hover:shadow-lg transform hover:scale-x-105 transition duration-300 cursor-pointer";
+    "hover:shadow-lg transform hover:scale-101 transition duration-300 cursor-pointer";
 
   return (
     <div

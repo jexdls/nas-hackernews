@@ -1,16 +1,31 @@
 /* THEME COLORS */
+
+:root {
+  --primary-color: #fbc91b;
+  --gray-text: #00000080;
+  --black-text: #000000d1;
+  --gray: #f2f2f2;
+}
+
 .x-bg-color-pri {
-  background-color: #fbc91b;
+  background-color: var(--primary-color);
 }
 
 .x-color-gt {
-  color: #00000080;
+  color: var(--gray-text);
 }
 
 .x-bg-color-g {
-  background-color: #f2f2f2;
+  background-color: var(--gray);
 }
 
 .x-color-bt {
-  color: #000000d1;
+  color: var(--black-text);
+}
+
+.x-border-g {
+  border-color: var(--gray);
+}
+.x-border-pri {
+  border-color: var(--primary-color);
 }

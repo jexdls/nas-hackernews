@@ -11,13 +11,10 @@ function App() {
   const [articleItems, setArticleItems] = useState(fetchedArticleItems);
 
   return (
-    <div className="App">
+    <div className="App flex flex-col space-y-2">
       <Banner />
-
       <Sort />
-
       <Articles articleItems={articleItems} />
-
       <Load />
       <Footer />
     </div>

@@ -23,4 +23,5 @@ export const getArticle = async (articleId) => {
   } catch (err) {
     console.log(err);
   }
+  e;
 };

@@ -2,6 +2,8 @@ export default function SortButton({
   children,
   selectedValue,
   selected_State,
+  setArticleMode,
+  articleMode,
 }) {
   const selected = selected_State.selected;
   const setSelected = selected_State.setSelected;
@@ -15,7 +17,10 @@ export default function SortButton({
 
   return (
     <button
-      onClick={() => setSelected(selectedValue)}
+      onClick={() => {
+        setSelected(selectedValue);
+        setArticleMode(articleMode);
+      }}
       className={`rounded-full py-0.5 px-3 font-bold text-md focus:outline-none ${hoverEffect} ${selectedEffect} `}
     >
       {children}

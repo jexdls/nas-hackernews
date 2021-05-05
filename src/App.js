@@ -12,33 +12,34 @@ import { getArticleIds } from "./Api";
 
 function App() {
   const [articleIds, setArticleIds] = useState();
-  const [story, setStory] = useState("newstories");
+  const [articleMode, setArticleMode] = useState("newstories");
+  const [iterate, setIterate] = useState(0);
 
-  // this useEffect is ran only once
   useEffect(() => {
-    // Get the ids of new articles according to hackernews API and store it to articleIds
-    getArticleIds(story).then((articleIds) => setArticleIds(articleIds));
-    // console.log(articleIds);
-  }, [story]);
+    // Get the ids of new articles. store it to articleIds
+    getArticleIds(articleMode).then((articleIds) => setArticleIds(articleIds));
+    console.log(articleIds);
+  }, [articleMode]);
 
   return (
     <div className="App h-screen flex flex-col">
       <Banner />
+      {articleMode}
       <div className="p-6">
-        <Sort />
+        <Sort setArticleMode={setArticleMode} />
         {/* show loading screen when the data hasnt arrived yet*/}
-        {articleIds ? <Articles articleIds={articleIds} /> : <LoadingCard />}
-        <Load />
+        {articleIds ? (
+          <Articles
+            articleIds={articleIds}
+            articleMode={articleMode}
+            iterate={iterate}
+          />
+        ) : (
+          <LoadingCard />
+        )}
+        <Load iterate_state={{ iterate, setIterate }} />
       </div>
-      <button
-        onClick={() => {
-          story == "newstories"
-            ? setStory("topstories")
-            : setStory("newstories");
-        }}
-      >
-        click
-      </button>
+
       <Footer />
     </div>
   );

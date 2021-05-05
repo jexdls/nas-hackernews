@@ -9,7 +9,7 @@ export default function SortButton({
   const hoverEffect =
     "hover:shadow-sm transform hover:scale-105 transition duration-100";
 
-  // set button shape to pill if not selected or D shaped if selected
+  // change color of pill button when clicked and unclicked
   const selectedEffect =
     selected == selectedValue ? " x-bg-color-pri" : " x-bg-color-g";
 

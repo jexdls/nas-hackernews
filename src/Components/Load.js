@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-
 export default function Load() {
   const hoverEffect =
     "hover:shadow-lg transform hover:scale-101 transition duration-300";

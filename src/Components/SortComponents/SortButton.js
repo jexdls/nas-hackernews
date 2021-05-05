@@ -4,6 +4,8 @@ export default function SortButton({
   selected_State,
   setArticleMode,
   articleMode,
+  currArticleMode,
+  setIterate,
 }) {
   const selected = selected_State.selected;
   const setSelected = selected_State.setSelected;
@@ -19,7 +21,12 @@ export default function SortButton({
     <button
       onClick={() => {
         setSelected(selectedValue);
-        setArticleMode(articleMode);
+        // Changes the stories category to desired
+        // Reset Iterate to zero if a different button is clicked
+        if (currArticleMode !== articleMode) {
+          setArticleMode(articleMode);
+          setIterate(0);
+        }
       }}
       className={`rounded-full py-0.5 px-3 font-bold text-md focus:outline-none ${hoverEffect} ${selectedEffect} `}
     >

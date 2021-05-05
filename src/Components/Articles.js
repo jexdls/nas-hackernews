@@ -9,17 +9,20 @@ export default function Articles({ articleIds, articleMode, iterate }) {
   const [prevMode, setPrevMode] = useState("newstories");
 
   useEffect(() => {
-    if (iterate != 0) {
-      for (
-        let i = iterate * numberOfItemsToLoad;
-        i < numberOfItemsToLoad + numberOfItemsToLoad * iterate;
-        i++
-      ) {
-        console.log(`i is ${i}`);
-        getArticle(articleIds[i]).then((article) => {
-          setArticles((curArticles) => [...curArticles, article]);
-        });
-      }
+    // Reset the articles loaded in the screen if a different button (New, Top or Past) is clicked
+    if (iterate == 0) {
+      setArticles([]);
+    }
+
+    // Get article x times and store it to articles -the array used for mapping through to show list of articles
+    for (
+      let i = iterate * numberOfItemsToLoad;
+      i < numberOfItemsToLoad + numberOfItemsToLoad * iterate;
+      i++
+    ) {
+      getArticle(articleIds[i]).then((article) => {
+        setArticles((curArticles) => [...curArticles, article]);
+      });
     }
   }, [iterate, articleIds, articleMode]);
   return (

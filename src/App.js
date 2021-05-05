@@ -11,12 +11,15 @@ import LoadingCard from "./Components/ArticlesComponents/ArticleCardComponents/L
 import { getArticleIds } from "./Api";
 
 function App() {
+  // Array of ids of article
   const [articleIds, setArticleIds] = useState();
+  // If the current mode is New or Top ,etc
   const [articleMode, setArticleMode] = useState("newstories");
+  // How many times load more is clicked
   const [iterate, setIterate] = useState(0);
 
   useEffect(() => {
-    // Get the ids of new articles. store it to articleIds
+    // Get the ids of articles. store it to articleIds
     getArticleIds(articleMode).then((articleIds) => setArticleIds(articleIds));
     console.log(articleIds);
   }, [articleMode]);
@@ -26,7 +29,10 @@ function App() {
       <Banner />
       {articleMode}
       <div className="p-6">
-        <Sort setArticleMode={setArticleMode} />
+        <Sort
+          articleMode_state={{ articleMode, setArticleMode }}
+          setIterate={setIterate}
+        />
         {/* show loading screen when the data hasnt arrived yet*/}
         {articleIds ? (
           <Articles

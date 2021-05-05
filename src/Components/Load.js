@@ -5,7 +5,7 @@ export default function Load() {
   return (
     <div className="flex w-full">
       <button
-        className={`w-full m-6 p-6 rounded-xl text-center font-bold text-xl x-bg-color-pri focus:outline-none ${hoverEffect}`}
+        className={`w-full mt-6 p-6 rounded-xl text-center font-bold text-xl x-bg-color-pri focus:outline-none ${hoverEffect}`}
       >
         Load More
       </button>

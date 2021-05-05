@@ -6,6 +6,7 @@ import Load from "./Components/Load";
 import Articles from "./Components/Articles";
 import Sort from "./Components/Sort";
 import { getArticleIds } from "./Api";
+import LoadingCard from "./Components/ArticlesComponents/ArticleCardComponents/LoadingCard";
 
 function App() {
   const [articleIds, setArticleIds] = useState();
@@ -19,10 +20,12 @@ function App() {
   return (
     <div className="App h-screen flex flex-col">
       <Banner />
-      <Sort />
-      {/* show loading screen when the data hasnt arrived yet*/}
-      {articleIds ? <Articles articleIds={articleIds} /> : "Loading..."}
-      <Load />
+      <div className="p-6">
+        <Sort />
+        {/* show loading screen when the data hasnt arrived yet*/}
+        {articleIds ? <Articles articleIds={articleIds} /> : <LoadingCard />}
+        <Load />
+      </div>
       <Footer />
     </div>
   );

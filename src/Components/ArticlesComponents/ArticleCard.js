@@ -11,7 +11,7 @@ export default function ArticleCard({ data }) {
     <a
       target="_blank"
       href={articleLink}
-      className={`flex flex-col shadow-md p-6 mx-6 rounded-xl space-y-2 ${hoverEffect}`}
+      className={`flex flex-col shadow-md p-6 rounded-xl space-y-2 ${hoverEffect}`}
     >
       <Header header={data.title} userName={data.by} />
       {/* <Description description={data.description} /> */}

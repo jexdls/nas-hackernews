@@ -6,8 +6,10 @@ export const getArticleIds = async (articlesURL) => {
   try {
     const res = await axios
       .get(`${urlBase}${articlesURL}.json`)
-      .then(({ data }) => data);
-    return res;
+      .then((response) => response);
+    console.log(`ArticleIds axios Status: ${res.status} ${res.statusText}`);
+    console.log(res.data);
+    return res.data;
   } catch (err) {
     console.log(err);
   }
@@ -18,8 +20,10 @@ export const getArticle = async (articleId) => {
   try {
     const res = await axios
       .get(`${urlBase}item/${articleId}.json`)
-      .then(({ data }) => data);
-    return res;
+      .then((response) => response);
+
+    console.log(`Article axios Status: ${res.status} ${res.statusText}`);
+    return res.data;
   } catch (err) {
     console.log(err);
   }

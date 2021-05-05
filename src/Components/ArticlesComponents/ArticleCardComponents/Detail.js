@@ -21,7 +21,10 @@ export default function Detail({ commentsNum, timeCreated }) {
   return (
     <div className="x-color-gt font-lg pt-2 text-xs flex items-center">
       <BiTimeFive /> &nbsp;
-      {timeElapsedSentence} &nbsp; &nbsp;| &nbsp; &nbsp;{commentsNum} comments
+      {timeElapsedSentence} &nbsp; &nbsp;| &nbsp; &nbsp;
+      {commentsNum == 0
+        ? "No comment"
+        : `${commentsNum == 1 ? "1 comment" : `${commentsNum} comments`}`}
     </div>
   );
 }

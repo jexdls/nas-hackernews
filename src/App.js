@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 import Load from "./Components/Load";
 import Articles from "./Components/Articles";
 import Sort from "./Components/Sort";
-import { getArticleIds } from "./Api";
 import LoadingCard from "./Components/ArticlesComponents/ArticleCardComponents/LoadingCard";
+
+import { getArticleIds } from "./Api";
 
 function App() {
   const [articleIds, setArticleIds] = useState();

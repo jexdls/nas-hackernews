@@ -7,8 +7,7 @@ export const getArticleIds = async (articlesURL) => {
     const res = await axios
       .get(`${urlBase}${articlesURL}.json`)
       .then((response) => response);
-    console.log(`ArticleIds axios Status: ${res.status} ${res.statusText}`);
-    console.log(res.data);
+    console.log(`getArticleIds axios Status: ${res.status} ${res.statusText}`);
     return res.data;
   } catch (err) {
     console.log(err);
@@ -22,7 +21,7 @@ export const getArticle = async (articleId) => {
       .get(`${urlBase}item/${articleId}.json`)
       .then((response) => response);
 
-    console.log(`Article axios Status: ${res.status} ${res.statusText}`);
+    console.log(`getArticle axios Status: ${res.status} ${res.statusText}`);
     return res.data;
   } catch (err) {
     console.log(err);

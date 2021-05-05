@@ -12,12 +12,14 @@ import { getArticleIds } from "./Api";
 
 function App() {
   const [articleIds, setArticleIds] = useState();
+  const [story, setStory] = useState("newstories");
 
   // this useEffect is ran only once
   useEffect(() => {
     // Get the ids of new articles according to hackernews API and store it to articleIds
-    getArticleIds("newstories").then((articleIds) => setArticleIds(articleIds));
-  }, []);
+    getArticleIds(story).then((articleIds) => setArticleIds(articleIds));
+    // console.log(articleIds);
+  }, [story]);
 
   return (
     <div className="App h-screen flex flex-col">
@@ -28,6 +30,15 @@ function App() {
         {articleIds ? <Articles articleIds={articleIds} /> : <LoadingCard />}
         <Load />
       </div>
+      <button
+        onClick={() => {
+          story == "newstories"
+            ? setStory("topstories")
+            : setStory("newstories");
+        }}
+      >
+        click
+      </button>
       <Footer />
     </div>
   );

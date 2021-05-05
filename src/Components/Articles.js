@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ArticleCard from "./ArticlesComponents/ArticleCard";
 import { getArticle } from "../Api";
+import LoadingCard from "./ArticlesComponents/ArticleCardComponents/LoadingCard";
 
 export default function Articles({ articleIds }) {
   const [articles, setArticles] = useState([]);
@@ -13,7 +14,6 @@ export default function Articles({ articleIds }) {
       getArticle(articleIds[i]).then((article) => {
         temp.push(article);
         setArticles(temp);
-        console.log(temp);
       });
     }
     // B takes precedence before A when sorting.
@@ -24,11 +24,13 @@ export default function Articles({ articleIds }) {
   return (
     <div className="mt-6 space-y-6">
       {/* Map through the articles JSON and generate a <ArticleCard/> component for each article  */}
-      {articles
-        ? articles.map((article) => (
-            <ArticleCard data={article} key={article.id} />
-          ))
-        : "Fetching Articles..."}
+      {articles ? (
+        articles.map((article) => (
+          <ArticleCard data={article} key={article.id} />
+        ))
+      ) : (
+        <LoadingCard />
+      )}
     </div>
   );
 }

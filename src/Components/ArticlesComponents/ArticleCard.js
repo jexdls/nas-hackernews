@@ -15,7 +15,7 @@ export default function ArticleCard({ data }) {
     >
       <Header header={data.title} userName={data.by} />
       {/* <Description description={data.description} /> */}
-      <Detail timePassed={data.time} commentsNum={data.descendants} />
+      <Detail timeCreated={data.time} commentsNum={data.descendants} />
     </a>
   );
 }

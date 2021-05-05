@@ -11,6 +11,10 @@
   background-color: var(--primary-color);
 }
 
+.x-color-pri {
+  color: var(--primary-color);
+}
+
 .x-color-gt {
   color: var(--gray-text);
 }

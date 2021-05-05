@@ -26,11 +26,13 @@ export default function Articles({ articleIds, articleMode, iterate }) {
     }
   }, [iterate, articleIds, articleMode]);
   return (
-    <div className="mt-6 space-y-6">
+    <div className="space-y-6">
       {/* show loading screen when the data hasnt arrived yet*/}
       {articles ? (
         /* Map through the articles JSON and generate a <ArticleCard/> component for each article  */
-        articles.map((article) => <ArticleCard data={article} />)
+        articles.map((article) => (
+          <ArticleCard data={article} key={article.id} />
+        ))
       ) : (
         <LoadingCard />
       )}

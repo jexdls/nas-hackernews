@@ -8,7 +8,6 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "firebase": "^8.4.3",
-    "hacker-news-api": "^2.0.0",
     "pretty-ms": "^7.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

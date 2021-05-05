@@ -5,31 +5,23 @@ import Footer from "./Components/Footer";
 import Load from "./Components/Load";
 import Articles from "./Components/Articles";
 import Sort from "./Components/Sort";
-import fetchedArticleItems from "./data.json";
-
-import "firebase/firestore";
-import { useFirestore } from "reactfire";
-
-const urlTop = "https://hacker-news.firebaseio.com/v0/topstories.json";
-const urlNew = "https://hacker-news.firebaseio.com/v0/newstories.json";
+import { getArticleIds } from "./Api";
 
 function App() {
-  const [topArticleItems, setTopArticleItems] = useState(fetchedArticleItems);
+  const [articleIds, setArticleIds] = useState();
 
+  // this useEffect is ran only once
   useEffect(() => {
-    useFirestore().collection("hacker-news").doc("topstories");
-
-    // useFirestore()
-    // .collection("")
-    // .onSnapshot((snapshot) => {
-    //   setTopArticleItems(snapshot.docs.map((doc) => doc.data()));
-    // });
+    // Get the ids of new articles according to hackernews API and store it to articleIds
+    getArticleIds("newstories").then((articleIds) => setArticleIds(articleIds));
   }, []);
+
   return (
     <div className="App h-screen flex flex-col">
       <Banner />
       <Sort />
-      <Articles articleItems={topArticleItems} />
+      {/* show loading screen when the data hasnt arrived yet*/}
+      {articleIds ? <Articles articleIds={articleIds} /> : "Loading..."}
       <Load />
       <Footer />
     </div>

@@ -12,7 +12,8 @@ export default function Detail({ commentsNum, timePassed }) {
   return (
     <div className="x-color-gt font-lg pt-2 text-xs flex items-center">
       <BiTimeFive /> &nbsp;
-      {timePassedSentence} &nbsp; &nbsp;| &nbsp; &nbsp;{commentsNum} comments
+      {timePassedSentence} ago &nbsp; &nbsp;| &nbsp; &nbsp;{commentsNum}{" "}
+      comments
     </div>
   );
 }

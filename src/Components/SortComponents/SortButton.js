@@ -15,7 +15,7 @@ export default function SortButton({
 
   // change color of pill button when clicked and unclicked
   const selectedEffect =
-    selected == selectedValue ? " x-bg-color-pri" : " x-bg-color-g";
+    selected === selectedValue ? " x-bg-color-pri" : " x-bg-color-g";
 
   return (
     <button

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import SortButton from "./SortComponents/SortButton";
 
 export default function Sort({ articleMode_state, setIterate, isSortFixed }) {
@@ -58,6 +58,7 @@ export default function Sort({ articleMode_state, setIterate, isSortFixed }) {
         </SortButton>
       </div>
 
+      {/* show the arrow only when the tab is fixed atop of screen */}
       {isSortFixed && (
         <a
           href="#topsection"

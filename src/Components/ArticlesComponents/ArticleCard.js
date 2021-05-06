@@ -1,4 +1,3 @@
-import Description from "./ArticleCardComponents/Description";
 import Detail from "./ArticleCardComponents/Detail";
 import Header from "./ArticleCardComponents/Header";
 
@@ -10,11 +9,11 @@ export default function ArticleCard({ data }) {
   return (
     <a
       target="_blank"
+      rel="noreferrer"
       href={articleLink}
       className={`flex flex-col shadow-md p-6 rounded-xl space-y-2 ${hoverEffect}`}
     >
       <Header header={data.title} userName={data.by} />
-      {/* <Description description={data.description} /> */}
       <Detail timeCreated={data.time} commentsNum={data.descendants} />
     </a>
   );
